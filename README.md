@@ -10,8 +10,8 @@ This is just my personal boilerplate, it may or may not be a suitable for your p
 * production webpack build [ ]
 * add redux with saga middleware [ ]
 * add flow [ ]
-* add mocha
-* add travis
+* add mocha [ ]
+* add travis [ ]
 * add inline styles [ ]
 * get cracking [ ]
 
