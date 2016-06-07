@@ -1,5 +1,18 @@
-react-hot-boilerplate
-=====================
+react-hot-boilerplate 3 fork
+============================
+
+This is a fork of https://github.com/gaearon/react-hot-boilerplate/tree/next.
+
+This is just my personal boilerplate, it may or may not be a suitable for your project(s).
+
+##my todo
+### todo
+* production webpack build [ ]
+* add redux with saga middleware [ ]
+* add flow [ ]
+* add inline styles [ ]
+* get cracking [ ]
+
 
 The minimal dev environment to enable live-editing React components.
 
