@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
+// @flow
+import React, { Component, PropTypes } from 'react';
 
-export default class Counter extends Component {
-  constructor(props) {
+type Props = {name: string};
+type State = {counter: number};
+
+export default class Counter extends Component{
+  interval: number;
+  state: State;
+  props: Props;
+
+  constructor(props: Props) {
     super(props);
-    this.state = { counter: 0 };
+    this.state = { counter: 1};
   }
 
   componentDidMount() {
@@ -20,9 +28,13 @@ export default class Counter extends Component {
     clearInterval(this.interval);
   }
 
-  render() {
+  render(): React.Element{
     return (
-      <h2>Counter: {this.state.counter}</h2>
+      <h2>Counter: {this.state.counter} {this.props.name}</h2>
    );
   }
 }
+
+Counter.propTypes = {
+  name: PropTypes.string
+};
