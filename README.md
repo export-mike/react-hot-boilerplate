@@ -9,7 +9,7 @@ This is just my personal boilerplate, it may or may not be a suitable for your p
 ### todo
 * [x] production webpack build
 * [ ] add redux with saga middleware
-* [ ] react router
+* [x] react router
 * [x] add flow
 * [ ] add mocha
 * [ ] add travis
