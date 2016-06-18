@@ -4,14 +4,14 @@ import React, { Component, PropTypes } from 'react';
 type Props = {name: string};
 type State = {counter: number};
 
-export default class Counter extends Component{
-  interval: number;
+export default class Counter extends Component {
   state: State;
   props: Props;
+  interval: number;
 
   constructor(props: Props) {
     super(props);
-    this.state = { counter: 1};
+    this.state = { counter: 1 };
   }
 
   componentDidMount() {
@@ -20,7 +20,7 @@ export default class Counter extends Component{
 
   tick() {
     this.setState({
-      counter: this.state.counter + 1
+      counter: this.state.counter + 1,
     });
   }
 
@@ -28,7 +28,7 @@ export default class Counter extends Component{
     clearInterval(this.interval);
   }
 
-  render(): React.Element{
+  render() {
     return (
       <h2>Counter: {this.state.counter} {this.props.name}</h2>
    );
@@ -36,5 +36,5 @@ export default class Counter extends Component{
 }
 
 Counter.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
 };

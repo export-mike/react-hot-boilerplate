@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from './Layout';
 import Counter from './Counter';
 
@@ -10,12 +10,8 @@ import Counter from './Counter';
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 
-export default class App extends Component {
-  render() {
-    return (
-      <Layout>
-        <Counter name={'hi'}/>
-      </Layout>
-    );
-  }
-}
+export default () =>
+  <Layout>
+    <Counter name={'hi'} />
+  </Layout>
+;

@@ -1,3 +1,12 @@
 [ignore]
-.*/node_modules/*
-.*/node_modules/react/.*
+.*/node_modules/webpack/.*
+.*/node_modules/webpack-dev-server/.*
+.*/node_modules/redux/examples/.*
+.*/node_modules/redux/lib/.*
+.*/node_modules/fbjs/.*
+
+[libs]
+flow
+
+[options]
+esproposal.class_instance_fields=enable

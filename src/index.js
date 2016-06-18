@@ -10,17 +10,16 @@ ReactDOM.render(
   </AppContainer>,
   rootEl
 );
-
 if (module.hot) {
   module.hot.accept('./App', () => {
-    // If you use Webpack 2 in ES modules mode, you can
-    // use <App /> here rather than require() a <NextApp />.
-    const NextApp = require('./App').default;
+  // If you use Webpack 2 in ES modules mode, you can
+  // use <App /> here rather than require() a <NextApp />.
+    const NextApp = require('./App').default; // eslint-disable-line global-require
     ReactDOM.render(
       <AppContainer>
-         <NextApp />
+        <NextApp />
       </AppContainer>,
-      rootEl
-    );
+    rootEl
+  );
   });
 }
