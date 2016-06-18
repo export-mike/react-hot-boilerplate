@@ -4,7 +4,7 @@
   "plugins": ["flow-vars"],
   "rules": {
     "react/sort-comp": 0,
-    "flow-vars/define-flow-type": 2,
-    "flow-vars/use-flow-type": 2,
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1
   }
 }

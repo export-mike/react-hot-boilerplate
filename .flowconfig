@@ -4,7 +4,7 @@
 .*/node_modules/redux/examples/.*
 .*/node_modules/redux/lib/.*
 .*/node_modules/fbjs/.*
-
+.*/node_modules/redux/.*
 [libs]
 flow
 

@@ -1,3 +1,3 @@
 import React from 'react';
-import Counter from '../components/Counter';
-export default () => <Counter name={'hi'} />;
+import Counter from '../containers/Counter';
+export default () => <Counter />;

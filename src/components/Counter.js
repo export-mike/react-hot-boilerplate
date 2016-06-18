@@ -1,7 +1,14 @@
 // @flow
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
-type Props = {name: string};
+type Props = {
+  counter: number,
+  increment: Function,
+  incrementIfOdd: Function,
+  decrement: Function,
+  counter: Function,
+};
+
 type State = {counter: number};
 
 export default class Counter extends Component {
@@ -9,32 +16,18 @@ export default class Counter extends Component {
   props: Props;
   interval: number;
 
-  constructor(props: Props) {
-    super(props);
-    this.state = { counter: 1 };
-  }
-
-  componentDidMount() {
-    this.interval = setInterval(this.tick.bind(this), 1000);
-  }
-
-  tick() {
-    this.setState({
-      counter: this.state.counter + 1,
-    });
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
   render() {
+    const { increment, incrementIfOdd, decrement, counter } = this.props;
     return (
-      <h2>Counter: {this.state.counter} {this.props.name}</h2>
-   );
+      <p>
+        Clicked: {counter} times
+        {' '}
+        <button onClick={increment}>+</button>
+        {' '}
+        <button onClick={decrement}>-</button>
+        {' '}
+        <button onClick={incrementIfOdd}>Increment if odd</button>
+      </p>
+    );
   }
 }
-
-Counter.propTypes = {
-  name: PropTypes.string,
-};
