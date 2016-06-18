@@ -7,13 +7,13 @@ This is just my personal boilerplate, it may or may not be a suitable for your p
 
 ##my todo
 ### todo
-* production webpack build [ * ]
-* add redux with saga middleware [ ]
-* add flow [ * ]
-* add mocha [ ]
-* add travis [ ]
-* add inline styles [ ]
-* get cracking [ ]
+* [x] production webpack build
+* [ ] add redux with saga middleware
+* [x] add flow
+* [ ] add mocha
+* [ ] add travis
+* [ ] add inline styles
+* [ ] get cracking
 
 The minimal dev environment to enable live-editing React components.
 
