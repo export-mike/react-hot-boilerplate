@@ -1,7 +1,9 @@
 // @flow
 import React from 'react';
-import Layout from './Layout';
-import Counter from './Counter';
+import Layout from './components/Layout';
+import Home from './views/Home';
+import NotFound from './views/NotFound';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -11,7 +13,10 @@ import Counter from './Counter';
 // https://github.com/reactjs/react-router/issues/2182
 
 export default () =>
-  <Layout>
-    <Counter name={'hi'} />
-  </Layout>
+  <Router history={browserHistory}>
+    <Route path="/" component={Layout}>
+      <IndexRoute component={Home} />
+      <Route path="*" component={NotFound} />
+    </Route>
+  </Router>
 ;
