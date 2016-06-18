@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "typecheck": "flow check"
+    "typecheck": "flow check",
+    "build": "webpack --config ./webpack.config.production.js --colors --bail"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^1.5.3",
     "eslint-plugin-react": "^5.2.2",
     "flow-bin": "^0.26.0",
+    "html-webpack-plugin": "^2.21.0",
     "react-hot-loader": "^3.0.0-beta.1",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
