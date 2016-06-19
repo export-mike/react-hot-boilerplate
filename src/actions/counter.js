@@ -1,6 +1,7 @@
 // @flow
 export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
 export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
+export const INCREMENT_IF_ODD = 'INCREMENT_IF_ODD';
 
 export function increment() {
   return {
@@ -15,19 +16,7 @@ export function decrement() {
 }
 
 export function incrementIfOdd() {
-  return (dispatch: Function, getState: Function) => {
-    const { counter } = getState();
-
-    if (counter % 2 !== 0) {
-      dispatch(increment());
-    }
-  };
-}
-
-export function incrementAsync() {
-  return (dispatch: Function) => {
-    setTimeout(() => {
-      dispatch(increment());
-    }, 1000);
+  return {
+    type: INCREMENT_IF_ODD,
   };
 }

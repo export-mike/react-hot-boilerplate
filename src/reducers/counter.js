@@ -10,3 +10,5 @@ export default function counter(state = 0, action) {
       return state;
   }
 }
+
+export const getCounter = state => state;
