@@ -4,15 +4,18 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import configureStore from './store';
 import rootSaga from './sagas';
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
 const store = configureStore();
 
 store.runSaga(rootSaga);
+const history = syncHistoryWithStore(browserHistory, store);
 
 const rootEl = document.getElementById('root');
 ReactDOM.render(
   <AppContainer>
-    <App store={store} />
+    <App history={history} store={store} />
   </AppContainer>,
   rootEl
 );
@@ -23,7 +26,7 @@ if (module.hot) {
     const NextApp = require('./App'); // eslint-disable-line global-require
     ReactDOM.render(
       <AppContainer>
-        <NextApp store={store} />
+        <NextApp history={history} store={store} />
       </AppContainer>,
     rootEl
   );
