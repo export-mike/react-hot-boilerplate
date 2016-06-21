@@ -5,6 +5,7 @@ import NotFound from './views/NotFound';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import DevTools from './containers/DevTools';
+import Form from './views/Form';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -21,6 +22,7 @@ class App extends Component { // eslint-disable-line react/prefer-stateless-func
         <Router history={history}>
           <Route path="/" component={Layout}>
             <IndexRoute component={Home} />
+            <Route path="/form" component={Form} />
             <Route path="*" component={NotFound} />
           </Route>
         </Router>
